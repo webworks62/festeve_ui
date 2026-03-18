@@ -12,5 +12,5 @@ FROM nginx:alpine
 
 COPY --from=build /app/dist/festeveui/browser /usr/share/nginx/html
 
-EXPOSE 4201
+EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
