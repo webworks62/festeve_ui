@@ -78,7 +78,7 @@ export class LoginComponent {
 
     if (this.loginForm.invalid) return;
 
-    this.http.post<any>("http://localhost:5000/api/auth/login", this.loginForm.value)
+    this.http.post<any>("http://192.168.1.21:5000/api/auth/login", this.loginForm.value)
       .subscribe({
         next: (res) => {
           localStorage.setItem("accessToken", res.accessToken);
